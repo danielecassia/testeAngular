@@ -1,0 +1,19 @@
+
+<form action=" " method="post" [formGroup]="nameEditor" #formDir="ngForm">
+  <label for="busca">Produto  </label>
+  <input type="search" id="busca" formControlName="busca"><br><br>
+
+  <label for="busca">Período  </label>
+  <select id="data" formControlName="data">
+    <option value=""></option>
+    <option value="1">01/2020</option>
+    <option value="2">02/2020</option>
+    <option value="3">03/2020</option>
+  </select><br><br>
+
+  <button type="submit"
+              class="btn btn-default"
+              [disabled]="nameEditor.invalid">Submit</button>
+      <button type="button" class="btn btn-default"
+             (click)="formDir.resetForm({})">Reset</button>
+</form>
