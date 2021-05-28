@@ -4,9 +4,10 @@
 
     <app-name-editor></app-name-editor>
 
-    <div *ngIf="musica.length == 0 && jaApertou == true">
-      Content to render when condition is true.
+    <div class="alert alert-danger" role="alert" *ngIf="musica.length == 0 && jaApertou == true">
+      O item iserido é <a href="#" class="alert-link">inválido</a>. Digite um item válido.
     </div>
+
     <div class="card-deck">
 
       <div *ngFor="let m of musica">
