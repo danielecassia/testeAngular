@@ -17,7 +17,7 @@ export class ServerService {
     })
   }
 
-  obterMusica(): BehaviorSubject<object> {
+  obterMusica(): BehaviorSubject<any> {
     return this.musicaServiceBehaviorSubject;
   }
 }

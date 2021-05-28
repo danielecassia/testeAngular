@@ -12,7 +12,7 @@ export class CustomersComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  get musica(): object {
+  get musica(): any[] {
     return this.serverService.obterMusica().value;
   }
 

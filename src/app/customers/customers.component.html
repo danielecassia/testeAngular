@@ -1,9 +1,14 @@
 <div>
   <p>customers works!</p>
-  {{musica}}
-
 
   <app-name-editor></app-name-editor>
 
-</div>
+  <div *ngFor="let m of musica">
+    <p>Id: {{ m.id }}</p>
+    <p>Título: {{ m.title }}</p>
+    <p>Descrição: {{ m.description }}</p>
+  </div>
 
+
+
+</div>
