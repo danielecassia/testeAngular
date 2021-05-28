@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ServerService } from '../server.service';
 
 @Component({
   selector: 'app-name-editor',
@@ -15,7 +16,7 @@ export class NameEditorComponent implements OnInit {
     this.name.setValue('Nancy');
   }
 
-  constructor() { }
+  constructor(private serverService: ServerService) { }
 
   nameEditor!: FormGroup;
 
@@ -32,4 +33,7 @@ export class NameEditorComponent implements OnInit {
   get busca() { return this.nameEditor.get('busca')!; }
   get data() { return this.nameEditor.get('data')!; }
 
+  enviarViaService(musica: string) {
+    this.serverService.alterarMusica(musica);
+  }
 }

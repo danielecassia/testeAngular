@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServerService } from '../server.service';
 
 @Component({
   selector: 'app-customers',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomersComponent implements OnInit {
 
-  constructor() { }
+  constructor(private serverService: ServerService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  get musica(): object {
+    return this.serverService.obterMusica().value;
   }
 
 }

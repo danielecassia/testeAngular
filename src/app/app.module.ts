@@ -4,17 +4,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ServerService } from './server.service';
+import { HttpClientModule } from '@angular/common/http';
 // import { NameEditorComponent } from './name-editor/name-editor.component';
 
+import serviceMirage from './mirageServe';
+serviceMirage()
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ServerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

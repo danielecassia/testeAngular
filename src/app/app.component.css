@@ -1,0 +1,35 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+#menu ul {
+  padding: 20px;
+  margin: 0px;
+  float: left;
+  width: 100%;
+  background-color: #ededed;
+  list-style: none;
+  font: 80% Tahoma;
+}
+
+#menu ul li {
+  display: inline;
+}
+
+#menu ul li a {
+  background-color: #ededed;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 10px solid #ededed;
+  padding: 10px 15px;
+  float: left;
+  font-family: after-white-space;
+  font-size: 30px;
+}
+
+#menu ul li a:hover {
+  background-color: #d6d6d6;
+  color: #6d6d6d;
+  border-bottom: 5px solid #ea0000;
+}
