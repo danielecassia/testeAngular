@@ -12,10 +12,6 @@ export class NameEditorComponent implements OnInit {
 
   name = new FormControl('');
 
-  updateName() {
-    this.name.setValue('Nancy');
-  }
-
   constructor(private serverService: ServerService) { }
 
   nameEditor!: FormGroup;
@@ -32,6 +28,7 @@ export class NameEditorComponent implements OnInit {
 
   get busca() { return this.nameEditor.get('busca')!; }
   get data() { return this.nameEditor.get('data')!; }
+
 
   enviarViaService(musica: string) {
     this.serverService.alterarMusica(musica);

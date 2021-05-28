@@ -1,14 +1,38 @@
-<div>
-  <p>customers works!</p>
+<div class="container">
 
-  <app-name-editor></app-name-editor>
+  <div class="box">
 
-  <div *ngFor="let m of musica">
-    <p>Id: {{ m.id }}</p>
-    <p>Título: {{ m.title }}</p>
-    <p>Descrição: {{ m.description }}</p>
+    <app-name-editor></app-name-editor>
+
+    <div *ngIf="musica.length == 0 && jaApertou == true">
+      Content to render when condition is true.
+    </div>
+    <div class="card-deck">
+
+      <div *ngFor="let m of musica">
+
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+
+          <div class="card-header">{{m.Papel}}</div>
+
+          <div class="card-body text-info">
+
+            <p>Compra: {{ m.Compra }}</p>
+            <p>Quantidade: {{ m.Quantidade }}</p>
+            <p> Valor Investido: {{m.Investido}}</p>
+            <p> Data de Compra: {{m.Investido}}</p>
+            <p> Data de Venda: {{m.Investido}}</p>
+            <p> Lucro: R${{m.LucroValor}}</p>
+            <p> Percentual de Lucro: {{m.LucroPercent}}</p>
+            <p> Corretora: {{m.Corretora}}</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
-
-
 
 </div>

@@ -10,9 +10,16 @@ export class ServerService {
 
   constructor(private httpClient: HttpClient) { }
 
+  get hhh() :boolean {
+    return this.estado;
+  }
+
+  estado = false;
+
   alterarMusica(valor: string) {
-  this.httpClient.get('/api/name-editor').subscribe((data) => {
+  this.httpClient.post('/api/name-editor', {filtro: valor}).subscribe((data) => {
       console.log(data);
+      this.estado = true;
       this.musicaServiceBehaviorSubject.next(data);
     })
   }

@@ -1,24 +1,42 @@
 <div class="content">
 
-  <div id="menu">
-    <ul>
-      <li>
-        <a routerLink="" title="Home">
-          Home
-        </a>
-      </li>
-      <li>
-        <a routerLink="/customers" title="Home">
-          teste
-        </a>
-      </li>
-      <li>
-        <a routerLink="/orders" title="Home">
-          teste
-        </a>
-      </li>
-    </ul>
-  </div>
+
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="" title="Home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/customers" title="Finance">Finance</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <main role="main" class="container">
+    <div class="jumbotron">
+      <h1>Mercado de Ações</h1>
+      <p class="lead" align="justify">O mercado de ações é um ambiente público e organizado para negociação de alguns títulos
+        mobiliários e imobiliários. As transações podem ocorrer por intermédio das bolsas de valores ou nos
+        chamados mercados de balcão.
+      </p>
+      <p class="lead" align="justify">
+        A bolsa de valores é o ambiente em que as compras e vendas de ações acontecem de fato. É nela que quem quer
+        vender seus papéis encontra quem quer comprá-los, por meio de sistemas sofisticados e processos padronizados
+        passa assegurar transparência e liquidez ao mercado.
+
+        No Brasil, a única bolsa de valores existente é a B3, resultado da fusão entre as antigas Bovespa, BM&F e Cetip.
+
+        Sendo a principal instituição de intermediação do mercado de capitais, a B3 desenvolve, implanta e provê
+        sistemas para a negociação de ações, derivativos de ações, títulos de renda fixa, títulos públicos federais,
+        derivativos financeiros, moedas à vista e commodities agropecuárias.
+      </p>
+
+    </div>
+  </main>
 
   <router-outlet></router-outlet>
 </div>

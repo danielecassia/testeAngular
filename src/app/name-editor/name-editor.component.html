@@ -1,52 +1,20 @@
-<style>
-  .container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center
-  }
+<div class="container">
 
-  .box {
-    width: 800px;
-    height: 800px;
-    background: rgb(255, 255, 255);
-  }
+  <div class="box">
 
-  body {
-    margin: 0px;
-  }
-</style>
+    <form action=" " method="post" [formGroup]="nameEditor" #formDir="ngForm">
 
-<html lang="en">
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Name</label>
+        <input type="email" class="form-control" id="busca" #busca formControlName="busca" placeholder="AZUL4">
+      </div>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-</head>
 
-<body>
-  <div class="container">
-    <div class="box">
-      <form action=" " method="post" [formGroup]="nameEditor" #formDir="ngForm">
-        <label for="busca">Produto </label>
-        <input type="search" id="busca" #busca formControlName="busca"><br><br>
+      <button class="btn btn-info" [disabled]="nameEditor.invalid" (click)="enviarViaService(busca.value)"> Pesquisar
+      </button>
 
-        <label for="busca">Período </label>
-        <select id="data" formControlName="data">
-          <option value=""></option>
-          <option value="1">01/2020</option>
-          <option value="2">02/2020</option>
-          <option value="3">03/2020</option>
-        </select><br><br>
+    </form>
 
-        <button class="btn btn-default" [disabled]="nameEditor.invalid"
-          (click)="enviarViaService(busca.value)">Submit</button>
-        <button type="button" class="btn btn-default" (click)="formDir.resetForm({})">Reset</button>
-      </form>
-    </div>
   </div>
-</body>
 
-</html>
+</div>

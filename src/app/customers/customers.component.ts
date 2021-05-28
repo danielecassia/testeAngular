@@ -12,6 +12,10 @@ export class CustomersComponent implements OnInit {
 
   ngOnInit(): void { }
 
+  get jaApertou():boolean {
+    return this.serverService.hhh;
+  }
+
   get musica(): any[] {
     return this.serverService.obterMusica().value;
   }
